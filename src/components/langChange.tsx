@@ -17,6 +17,7 @@ const LangChange = () => {
         <>
             {lang.map(item => (
                 <Button
+                    key={item.value}
                     variant={i18n.language === item.value ? 'default' : 'outline'}
                     onClick={() => changeLanguage(item.value)}
                 >
