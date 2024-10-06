@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
     darkMode: ['class'],
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-    theme: {
+    theme: {    
+        colors: {
+            white: '#fff',
+            gray: '#A4A4A4'
+        },
+        fontFamily:{'sans': ['Noto Sans TC', 'sans-serif']},
         extend: {
             borderRadius: {
                 lg: 'var(--radius)',
@@ -50,6 +56,9 @@ export default {
                     4: 'hsl(var(--chart-4))',
                     5: 'hsl(var(--chart-5))',
                 },
+            },
+            boxShadow: {
+                'box': '0 14px 40px #2A63FF'
             },
         },
     },

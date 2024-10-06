@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { LangChange } from '@/components/langChange'
 import { ThemeProvider } from '@/components/theme-provider'
 import { ThemeChange } from '@/components/themeChange'
+import Home from './pages/home'
+
+const setHTMLRem = () => {
+//   if (!document.querySelector('.main')) return
+//   const mainWidth = document.querySelector('.main')!.offsetWidth
+  let htmlSize = 16 * (window.innerWidth / 375)
+  htmlSize = htmlSize > 16 ? 16 : htmlSize
+  document.documentElement.style.fontSize = htmlSize + 'px'
+}
+
+window.addEventListener('resize', setHTMLRem)
 
 function App() {
-    const [count, setCount] = useState(0)
-    return (
-        <ThemeProvider defaultTheme="system" storageKey="theme">
-            <LangChange />
-            <ThemeChange />
-            <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-        </ThemeProvider>
-    )
+  return (
+    <ThemeProvider defaultTheme="system" storageKey="theme">
+      <div className="bg-gray-200 text-primary">
+        <div
+          className="main max-w-[26.875rem] w-full  mx-auto min-h-dvh"
+          style={{
+            background:
+              'linear-gradient(#2F78FB 0%, #3DA4FF 25%, #368EFD 50%, #C8DEFF 60%, #F4F6FF 75%, #9E93F2 90%, #6444E5 100%)',
+          }}
+        >
+          {/* <LangChange />
+            <ThemeChange /> */}
+          <Home />
+        </div>
+      </div>
+    </ThemeProvider>
+  )
 }
 
 export default App
