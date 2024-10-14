@@ -16,6 +16,7 @@
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
         "dropdown-menu": "^0.1.1",
+        "embla-carousel-react": "^8.3.0",
         "i18next": "^23.15.1",
         "i18next-http-backend": "^2.6.1",
         "lib-flexible": "^0.3.2",

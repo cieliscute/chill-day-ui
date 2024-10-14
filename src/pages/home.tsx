@@ -1,4 +1,4 @@
-import { MapPin, EllipsisVertical, ExternalLink, Sun, Wind   } from 'lucide-react'
+import { MapPin, EllipsisVertical, ExternalLink, Sun, Wind, SquarePen } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,10 +7,12 @@ import {
 } from '@/components/ui/dropdown-menu'
 import Image from '@/components/common/Image'
 import WeatherCard from '@/components/common/WeatherCard'
+import OtherArea from '@/components/home/OtherArea'
 
 function Home() {
   return (
-    <main className="p-4">
+    <main>
+    <div className="p-4">
       <nav className="pt-3 flex justify-between mb-5">
         <div className="flex gap-1 text-white">
           <MapPin className="w-7 h-7" />
@@ -64,6 +66,9 @@ function Home() {
       </div>
 
       <WeatherCard data={[1, 2]} />
+
+    </div>
+    <OtherArea data={[1, 2, 3, 4]}/>
     </main>
   )
 }

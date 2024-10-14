@@ -18,7 +18,7 @@ function App() {
     <ThemeProvider defaultTheme="system" storageKey="theme">
       <div className="bg-gray-200 text-primary">
         <div
-          className="main max-w-[26.875rem] w-full  mx-auto min-h-dvh"
+          className="main max-w-[26.875rem] w-full mx-auto min-h-dvh overflow-hidden"
           style={{
             background:
               'linear-gradient(#2F78FB 0%, #3DA4FF 25%, #368EFD 50%, #C8DEFF 60%, #F4F6FF 75%, #9E93F2 90%, #6444E5 100%)',
