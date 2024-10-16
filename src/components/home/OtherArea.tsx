@@ -47,7 +47,7 @@ function DotCarousel({data = []}: Params) {
     >
       <h2 className='flex items-center justify-between px-4'>
         <span>其他地區</span>
-        <SquarePen className="cursor-pointer"/>
+        <SquarePen className="cursor-pointer w-6 h-6"/>
       </h2>
 
       <CarouselContent className='pt-4 pb-3 pl-4'>

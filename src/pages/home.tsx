@@ -8,11 +8,12 @@ import {
 import Image from '@/components/common/Image'
 import WeatherCard from '@/components/common/WeatherCard'
 import OtherArea from '@/components/home/OtherArea'
+import WeatherChart from '@/components/home/WeatherChart'
 
 function Home() {
   return (
     <main>
-    <div className="p-4">
+    <div className="p-4 mb-2">
       <nav className="pt-3 flex justify-between mb-5">
         <div className="flex gap-1 text-white">
           <MapPin className="w-7 h-7" />
@@ -65,8 +66,9 @@ function Home() {
 
       </div>
 
-      <WeatherCard data={[1, 2]} />
+      <WeatherCard data={[1, 2]} className='mb-6'/>
 
+      <WeatherChart data={[{temp: 31}, {temp: 28}, {temp: 24}, {temp: 20}, {temp: 36}, {temp: 24}, {temp: 31}, {temp: 28}, {temp: 14}]}/>
     </div>
     <OtherArea data={[1, 2, 3, 4]}/>
     </main>
